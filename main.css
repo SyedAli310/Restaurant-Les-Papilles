@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    
+}
+/*------------------------Nav------------------------*/
+.nav-menu{
+    padding: 20px;
+}
+.fas{
+    color: #E15D44
+}
+.menu{
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;;
+    color: silver;
+    letter-spacing: 1px;
+}
+.menu:hover{
+    color: #E15D44;
+    transition-delay: 0.2s;
+}
+.bar1, .bar2, .bar3{
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+    
+}
+
+
+/*---------------------End of Nav--------------------*/
+/*Header----------------------------------------------------------------------------------------------*/
+header{
+    height: 100vh;
+    background:linear-gradient(rgba(0,0,0,43),rgba(0,0,0,0.4)), 
+    url("./images/header.jpg")no-repeat center center/cover;
+}
+
+.banner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+}
+
+.heading{
+    color: antiquewhite;
+    letter-spacing: 1px;
+    animation-name: slide ;
+    animation-duration: 2s;
+}
+.main{
+    font-family: 'Satisfy', cursive;
+    font-size: 25px;
+    color: #DAA520;
+    letter-spacing: 1.5px;
+    animation-name: slide;
+    animation-duration: 2s;
+    animation-delay: 0.3s;
+    animation-fill-mode: backwards;
+}
+@keyframes slide{
+    0%{
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/*End of Header---------------------------------------------------------------------------------------*/
+.info{
+    padding: 50px;
+    font-family: 'Quicksand', sans-serif;;
+    background:linear-gradient(rgba(0,0,0,43),rgba(0,0,0,0.4)), url('./images/achievement.jpg');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    border-top: 2px solid darkcyan;
+    border-bottom:2px solid darkcyan;
+}
+/*-------------------------------Menu--------------------------------------------------*/
+
+.crd{
+    position: relative;
+    margin: 20px;
+    background:#282828; 
+
+}
+.crd-i{
+    margin-top: 2px;
+}
+
+.crd-i:hover + .crd-b{
+ display: block;
+ transition-delay: 0.5s;
+}
+
+
+
+
+
+
+
+/*-------------------------------End of Menu--------------------------------------------------*/
+
+  

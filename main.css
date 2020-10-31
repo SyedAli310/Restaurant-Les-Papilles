@@ -3,26 +3,30 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     
 }
 /*------------------------Nav------------------------*/
 .nav-menu{
     padding: 20px;
+    
 }
 .fas{
-    color: #E15D44
+    color: #DAA520
 }
 .menu{
     font-size: 20px;
-    font-family: 'Quicksand', sans-serif;;
+    font-family: 'Quicksand', sans-serif;
     color: silver;
     letter-spacing: 1px;
 }
 .menu:hover{
-    color: #E15D44;
-    transition-delay: 0.2s;
+    color: #DAA520;
+    transition-delay: 0.1s;
 }
 .bar1, .bar2, .bar3{
     width: 23px;
@@ -95,20 +99,102 @@ header{
 
 }
 .crd-i{
-    margin-top: 2px;
+    margin-top: 5px;
 }
-
-.crd-i:hover + .crd-b{
- display: block;
- transition-delay: 0.5s;
-}
-
-
-
-
-
-
 
 /*-------------------------------End of Menu--------------------------------------------------*/
+
+
+/*-------------------------------Booking--------------------------------------------------*/
+.booking{
+    padding: 100px;
+    border-top: 2px solid #282828;
+    border-bottom: 2px solid #DAA520;
+    background-image: url("./images/table.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur();
+    width: auto;
+    height: auto;
+}
+#h1{
+    font-size:larger;
+    color: aliceblue;
+    border-left: 5px solid #DAA520;
+    border-radius: 5px;
+    border-right: 5px solid #DAA520;
+    background-color: #282828;
+    text-shadow: #282828;
+}
+.form{
+    box-shadow: 1px 1px 1px 1px #282828;
+    border-radius: 3px;
+    background-color: #282828;
+    padding: 20px;
+   
+}
+.valueSpan2{
+    background-color: beige;
+    padding: 2px 5px 2px 5px;
+    border-radius: 4px;
+}
+.sbutton{
+    color: beige;
+    border: 1px solid #ffc107;
+    border-radius: 20px;
+    padding: 5px 50px 5px 50px;
+    background: transparent;
+}
+.sbutton:hover{
+    background-color: #ffc107;
+    transition: all 0.4s linear;
+}
+/*-------------------------------End of Booking--------------------------------------------------*/
+
+/*-------------------------------Footer--------------------------------------------------*/
+
+.hours{
+    background-color: #282828;
+    color: #DAA520;
+    padding: 40px;
+    margin: 0;
+    border-bottom: 2px solid #DAA520;
+    
+}
+.hours p{
+    color: aliceblue;
+}
+.hours p:hover{
+    color: #DAA520;
+    transition-delay: 0.3s;
+    cursor: pointer;
+}
+.hr{
+    margin-bottom: 30px;
+}
+
+.carousel-indicators li { visibility: hidden; 
+}
+
+.lead{
+    margin-bottom: 10px;
+}
+.jumbotron{
+    margin-bottom: -50px;
+}
+.footer{
+    padding: 50px;
+    border-top: 2px solid #DAA520;
+    border-bottom: 2px solid #DAA520;
+    color: aliceblue;
+    margin: 0;
+}
+.footer span{
+    color: grey;
+}
+.footer span:hover{
+    color: #DAA520;
+}
+/*-------------------------------End of Footer--------------------------------------------------*/
 
   

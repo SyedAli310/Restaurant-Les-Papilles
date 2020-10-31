@@ -1,220 +1,426 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="./main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/6d3b2699a7.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-    <title>Les Papilles</title>
-    <script>
-        $(document).ready(function(){
-            $(".fas").mouseover(function(){
-                $("#logo").css("display","inline")
-            })
-            $(".fas").mouseout(function(){
-                $("#logo").css("display","none")
-            })
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-            $(document).scroll(function(){
-                $(".nav-menu").css("background","black")
-            })
-            $(document).scroll(function(){
-                if($(window).scrollTop() === 0){
-                $(".nav-menu").css("background","")}
-            })
-            
-        })
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="./main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/6d3b2699a7.js" crossorigin="anonymous"></script>
 
-   
-    </script>
-  </head>
-  <body>
-        <!--------------------Header------------------------------>
-        <header>
-        <!--------------------Navbar------------------------------>
-        <nav class="navbar navbar-expand-lg fixed-top nav-menu">
-            <a href="" ><i class="fas fa-pizza-slice fa-3x"><span id="logo" style="font-family: 'Caveat', cursive; font-size:35px; display:none;"> Les Papilles</span></i></a>
-            <button class="navbar-toggler navbar-button" type="button" data-toggle="collapse" data-target="#navbar">
-                <div class="bg-light bar1"></div>
-                <div class="bg-light bar2"></div>
-                <div class="bg-light bar3"></div>
-            </button>
-                <div class="collapse navbar-collapse justify-content-end text-uppercase font-weight-bold" id="navbar">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <title>Les Papilles</title>
+  <script>
+    $(document).ready(function () {
+      $(".fas").mouseover(function () {
+        $("#logo").css("display", "inline")
+      })
+      $(".fas").mouseout(function () {
+        $("#logo").css("display", "none")
+      })
 
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="" class="nav-link m-2 menu">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link m-2 menu">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link m-2 menu">MENU</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link m-2 menu">BOOK A TABLE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link m-2 menu">CONTACT</a>
-                    </li>
-                </ul>
-            </div>
-            
-        </nav>
-        <!--------------------End of Navbar----------------------->
-        <!--------------------Banner------------------------------>
-        
+      $(document).scroll(function () {
+        $(".nav-menu").css("background", "#282828")
+        $(".nav-menu").css("border-bottom", "1px solid aliceblue")
 
-            <div class="text-light text-right banner">
-                <h2 class="display-4 text-center font-weight-bold heading">
-                   Eat with <i style="font-size: larger; color:#E15D44 ;">Les Papilles</i> 
-                </h2><hr style=" border-top: 2px solid darkslategray;">
-                <p class="main text-center"><i>"Life is too short for boring food."</i>
-                </p><br>
-                <br>
-                <!-- <p class="main text-center"><i>More flavours for less.</i>
+      })
+      $(document).scroll(function () {
+        if ($(window).scrollTop() === 0) {
+          $(".nav-menu").css("background", "")
+          $(".nav-menu").css("border", "none")
+
+        }
+      })
+
+      const $valueSpan = $('.valueSpan2');
+      const $value = $('#customRange1');
+      $valueSpan.html($value.val());
+      $value.on('input change', () => {
+        $valueSpan.html($value.val());
+      });
+
+       
+      
+      $(document).on("click", ".sbutton", function (e) {
+        event.preventDefault();
+        var name=$("#name").val();
+        var email=$("#email").val();
+         var customers=$("#customRange1").val();
+         var date=$("#date").val();
+         var time=$("#time").val();
+     var p1 = "<p> SUCCESSFULLY BOOKED! </p>";
+     var p2 = "<span> Booked for: </span>";
+     var p3 = "<span>  On: </span>";
+     var p4 = "<span>  At: </span>";
+     var p5= "<span>  Guests: </span>"
+
+     $("#modal-body").html(p1 + p2 + name + p3 + date + p4 + time + p5 + customers );
+     if(name == ""){
+       alert("Name must be filled")
+     }  
+     else if(email == ""){
+      alert("Email must be filled")
+     }
+     else if(date == ""){
+      alert("Date must be filled")
+     }
+     else if(time == ""){
+      alert("Time must be filled")
+     }
+     else{
+     $("#myModal").modal()
+     }
+  
+     
+    });
+    
+    
+    
+    })
+
+
+  </script>
+</head>
+
+<body>
+  <!--------------------Header------------------------------>
+  <header>
+    <!--------------------Navbar------------------------------>
+    <nav class="navbar navbar-expand-lg fixed-top nav-menu">
+      <a href=""><i class="fas fa-pizza-slice fa-3x"><span id="logo"
+            style="font-family: 'Caveat', cursive; font-size:35px; display:none;"> Les Papilles</span></i></a>
+      <button class="navbar-toggler navbar-button" type="button" data-toggle="collapse" data-target="#navbar">
+        <div class="bg-light bar1"></div>
+        <div class="bg-light bar2"></div>
+        <div class="bg-light bar3"></div>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end text-uppercase font-weight-bold" id="navbar">
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link m-2 menu ">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link m-2 menu ">ABOUT</a>
+          </li>
+          <li class="nav-item ">
+            <a href="#m" class="nav-link m-2 menu three ">MENU</a>
+          </li>
+          <li class="nav-item">
+            <a href="#h1" class="nav-link m-2 menu">BOOK A TABLE</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link m-2 menu">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+    <!--------------------End of Navbar----------------------->
+    <!--------------------Banner------------------------------>
+
+
+    <div class="text-light text-right banner">
+      <h2 class="display-4 text-center font-weight-bold heading">
+        Eat with <i style="font-size: larger; color:#DAA520 ;">Les Papilles</i>
+      </h2>
+      <hr style=" border-top: 2px solid darkslategray;">
+      <p class="main text-center"><i>"Life is too short for boring food."</i>
+      </p><br>
+      <br>
+      <!-- <p class="main text-center"><i>More flavours for less.</i>
                 </p> -->
-                <div class="text-center ">
-                <button type="button" class="btn btn-outline-warning btn-lg btn-nav">See Menu</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <button type="button" class="btn btn-outline-warning btn-lg btn-nav">Order Online</button>
-            </div>
-            </div>
-        <!--------------------End of banner----------------------->
-        </header>    
-         <!--------------------End of Header----------------------->
-        <!--------------------Info----------------------->
-        <div class="text-white text-center text-uppercase info">
-                <div class="row" style=" margin-left: 0; margin-right: 0;">
-                  <div class="col-sm">
-                    <h1>1184</h1><p>Coffee cups sold</p>
-                  </div>
-                  <div class="col-sm">
-                    <h1>300+</h1><p>Regular customers</p>
-                  </div>
-                  <div class="col-sm">
-                    <h1>74</h1><p>Successful parties</p>
-                  </div>
-                  <div class="col-sm">
-                    <h1>600+</h1><p>Dishes</p>
-                  </div>
-                </div>
-              </div>
-        </div>
-        
-        <!--------------------End of info----------------------->
+      <div class="text-center ">
+       <a href="#m"> <button type="button"  class="btn btn-outline-warning btn-lg btn-nav">See Menu</button></a>&nbsp&nbsp&nbsp&nbsp&nbsp
+       <a href="https://www.swiggy.com/"> <button type="button" class="btn btn-outline-warning btn-lg btn-nav">Order Online</button></a>
+      </div>
+    </div>
+    <!--------------------End of banner----------------------->
+  </header>
+  <!--------------------End of Header----------------------->
+  <!--------------------Info----------------------->
+  <div class="text-white text-center text-uppercase info">
+    <div class="row" style=" margin-left: 0; margin-right: 0;">
+      <div class="col-sm">
+        <h1>1184</h1>
+        <p>Coffee cups sold</p>
+      </div>
+      <div class="col-sm">
+        <h1>300+</h1>
+        <p>Regular customers</p>
+      </div>
+      <div class="col-sm">
+        <h1>74</h1>
+        <p>Successful parties</p>
+      </div>
+      <div class="col-sm">
+        <h1>600+</h1>
+        <p>Dishes</p>
+      </div>
+    </div>
+  </div>
 
-        <!--------------------Menu----------------------->
-        <div class="page-header text-center font-weight-bold" style="background-color: #000; width: 100%; height: 50px; margin-top: 3px;"><h1 style="color: #E15D44;">Menu</h1></div>>
-      <div style="background-image:url('./images/bg2.jpg');margin-top: -20px;">
-        <div class="container text-center row" style="margin-left:12.5%;">
-        <div class="card col-sm-3 crd " >
+
+  <!--------------------End of info----------------------->
+
+  <!--------------------Slideshow----------------------->
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="2500"
+    style="height: 50%;">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+    </ol>
+    <div class="carousel-inner" style="height: 500px !important;">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="./images/c1.jpg" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="./images/c2.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="./images/c3.jpg" alt="Third slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="./images/c4.jpg" alt="Fourth slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="./images/c5.jpg" alt="Fifth slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="./images/c6.jpg" alt="Sixth slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <!--------------------End of Slideshow----------------------->
+
+  <!--------------------Menu----------------------->
+
+  <div class="page-header text-center font-weight-bold" id="m"
+    style="background-color:#282828; width: 100%; height: 50px; margin-top: 3px;">
+    <h1 style="color: #DAA520;">Menu</h1>
+  </div>>
+  <div class="text-center "
+    style="background-image:url('./images/bg2.jpg');margin-top: -20px; justify-content: center;">
+    <div class="container text-center row mx-auto ">
+      <div class="card col-sm-3 d-flex mx-auto crd ">
         <img src="./images/salad.jpg" alt="" class="card-img crd-i">
         <div class="card-body crd-b">
-            <h2 class="card-title text-light">Salads</h2>
-            <a href="" class="btn btn-outline-warning">View more</a>
+          <h2 class="card-title text-light">Salads</h2>
+          <a href="" class="btn btn-outline-warning">View more</a>
         </div>
+      </div>&nbsp
+      <div class="card col-sm-3 d-flex mx-auto crd">
+        <img src="./images/pizza.jpg" alt="" class="card-img crd-i">
+        <div class="card-body crd-b">
+          <h2 class="card-title text-light">Pizzas</h2>
+          <a href="" class="btn btn-outline-warning">View more</a>
         </div>
-        <div class="card col-sm-3 crd" >
-            <img src="./images/pizza.jpg" alt="" class="card-img crd-i">
-            <div class="card-body crd-b">
-                <h2 class="card-title text-light">Pizzas</h2>  
-                <a href="" class="btn btn-outline-warning">View more</a>
-            </div>
-            </div>
-            <div class="card col-sm-3 crd" >
-                <img src="./images/rolls.jpg" alt="" class="card-img crd-i">
-                <div class="card-body crd-b">
-                    <h2 class="card-title text-light">Rolls</h2> 
-                    <a href="" class="btn btn-outline-warning">View more</a>
-                </div>
-                </div>
-                <div class="card col-sm-3 crd" >
-                    <img src="./images/burger.jpg" alt="" class="card-img crd-i">
-                    <div class="card-body crd-b">
-                        <h2 class="card-title text-light">Burgers</h2> 
-                        <a href="" class="btn btn-outline-warning">View more</a>
-                    </div>
-                    </div>
-                    <div class="card col-sm-3 crd" >
-                        <img src="./images/dessert.jpg" alt="" class="card-img crd-i">
-                        <div class="card-body crd-b">
-                            <h2 class="card-title text-light">Desserts</h2>    
-                            <a href="" class="btn btn-outline-warning">View more</a>
-                        </div>
-                        </div>
-                        <div class="card col-sm-3 crd" >
-                            <img src="./images/meals.jpg" alt="" class="card-img crd-i">
-                            <div class="card-body crd-b">
-                                <h2 class="card-title text-light">Meals</h2>      
-                                <a href="" class="btn btn-outline-warning">View more</a>
-                            </div>
-                            </div>
-    </div></div>
-        <!--------------------End of Menu----------------------->
-        
-        <!--------------------Slideshow----------------------->
-
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"  style="height: 50%;">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-            </ol>
-            <div class="carousel-inner" style="height: 500px !important; border-top: 2px solid darkcyan;">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="./images/c1.jpg" alt="First slide" >
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="./images/c2.jpg" alt="Second slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="./images/c3.jpg" alt="Third slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="./images/c4.jpg" alt="Fourth slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="./images/c5.jpg" alt="Fifth slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="./images/c6.jpg" alt="Sixth slide">
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-
-        <!--------------------End of Slideshow----------------------->
+      </div>&nbsp
+      <div class="card col-sm-3 d-flex mx-auto crd">
+        <img src="./images/rolls.jpg" alt="" class="card-img crd-i">
+        <div class="card-body crd-b">
+          <h2 class="card-title text-light">Rolls</h2>
+          <a href="" class="btn btn-outline-warning">View more</a>
+        </div>
+      </div>&nbsp
+      <div class="card col-sm-3 d-flex mx-auto crd">
+        <img src="./images/burger.jpg" alt="" class="card-img crd-i">
+        <div class="card-body crd-b">
+          <h2 class="card-title text-light">Burgers</h2>
+          <a href="" class="btn btn-outline-warning">View more</a>
+        </div>
+      </div>&nbsp
+      <div class="card col-sm-3 d-flex mx-auto crd">
+        <img src="./images/dessert.jpg" alt="" class="card-img crd-i">
+        <div class="card-body crd-b">
+          <h2 class="card-title text-light">Desserts</h2>
+          <a href="" class="btn btn-outline-warning">View more</a>
+        </div>
+      </div>&nbsp
+      <div class="card col-sm-3 d-flex mx-auto crd">
+        <img src="./images/meals.jpg" alt="" class="card-img crd-i">
+        <div class="card-body crd-b">
+          <h2 class="card-title text-light">Meals</h2>
+          <a href="" class="btn btn-outline-warning">View more</a>
+        </div>
+      </div>
 
 
-    <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    </div>
+  </div>
+  <!--------------------End of Menu----------------------->
 
-    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+  <!--------------------Booking----------------------->
+
+  <div class="text-center booking">
+    <div id="h1">
+      <h1>Book a Table</h1>
+    </div>
+    <form class="form" name="myForm"  >
+      <div class="row">
+        <div class="col">
+          <label for="name" style="color: beige;">Name</label>
+          <input type="text" class="form-control" name="n" id="name" placeholder="Name" >
+        </div>
+        <div class="col">
+          <label for="name" style="color: beige;">E-mail</label>
+          <input type="email" class="form-control" name="email" id="email" placeholder="Email" >
+        </div>
+      </div><br>
+      <div class="form-group text-center" style="margin-left: 30px; margin-right: 30px;">
+        <label for="formControlRange" style="color: beige;">Number of Guests</label>
+        <input type="range" class="custom-range justify-content-center" id="customRange1" min="1" max="9" >
+        <span class="font-weight-bold text-primary ml-2 valueSpan2"></span>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="name" style="color: beige;">Date</label>
+          <input type="date" class="form-control" name="date" id="date" placeholder="Date" >
+        </div>
+        <div class="col">
+          <label for="name" style="color: beige;">Time</label>
+          <input type="time" class="form-control" name="time" id="time" placeholder="Time" >
+        </div>
+      </div> <br>
+      <input type="submit" value="Book"  class="sbutton"   style="outline: none !important;"></input>
+    </form>
+  </div>
+
+  <!--------------------End of Booking----------------------->
+
+  <!--------------------Modal----------------------->
+
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <div class="modal-content text-center">
+        <div class="modal-header text-center">
+          <h3 class="modal-title" style="margin-left: 25%;">Booking Successful</h3>
+        </div>
+        <div class="modal-body text-center" id="modal-body" >
+          
+        </div>
+        <div class="modal-footer text-center">
+          <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+  <!--------------------End of Modal----------------------->
+
+
+  
+    <!--------------------Opening Hours----------------------->
+    <!--------------------End of Opening Hours----------------------->
+    
+    <div class=" row text-center hours" >
+      <h3 class="col-xl-12 hr" style="color: aliceblue;">Opening hours</h3> 
+     <div class="col-md ">Mondays <p>9:00 a.m. to 9:00 p.m.</p></div>
+     <div class="col-md">Tuesdays<p>9:00 a.m. to 9:00 p.m.</p></div>
+     <div class="col-md">Wednesdays <p>9:00 a.m. to 9:00 p.m.</p></div>
+     <div class="col-md">Thursdays<p>9:00 a.m. to 9:00 p.m.</p></div>
+     <div class="col-md">Fridays-Saturdays<p>9:00 a.m. to 12:00 a.m.</p></div>
+     <div class="col-md">Sundays<p>Closed.</p></div>
+
+    </div>
+  
+
+  
+  <div class="jumbotron text-center">
+    <h3 class="display-5" style="color: #DAA520;">Info and Quotes</h3>
+    <h1 class="display-3" style="color: #282828;">Restaurant Blog</h1>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="4000"
+    style="height: 25%;">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+    </ol>
+    <div class="carousel-inner" style="height: 100px !important;">
+      <div class="carousel-item active">
+        <p class="lead d-block w-100"><i>We imagine a world where there’s no such thing as a bad cup of coffee and all coffee farmers live prosperously.</i></p>
+      </div>
+      <div class="carousel-item">
+        <p class="lead d-block w-100"><i>Some minds are like soup in a poor restaurant better left unstirred.</i></p>
+      </div>
+      <div class="carousel-item">
+        <p class="lead d-block w-100"><i>In a restaurant, choose a table near a waiter.</i></p>
+      </div>
+      <div class="carousel-item">
+        <p class="lead d-block w-100"><i>The murals in restaurants are on par with the food in museums.</i></p>
+      </div>
+      <div class="carousel-item">
+        <p class="lead d-block w-100"><i>A restaurant on the moon could not have had less atmosphere.</i></p>
+      </div>
+      <div class="carousel-item">
+        <p class="lead d-block w-100"><i>A good spice often deceives us into thinking that someone is a good cook.</i></p>
+      </div>
+    </div>
+  </div>
+
+    <hr class="my-4" style="color: darkgrey;">
+    <p style="color: darkgrey;">&#169 Les Papilles. All Rights Reserved.</p>
+
+    
+  </div>
+
+    <!--------------------Footer----------------------->
+  <div class="text-center row footer" style="background-color: #282828; margin-top: 0;">
+
+    <div class="col-sm">ADDRESS: <span>25 Bich St., New York, NY 10002.</span></div>
+    <div class="col-sm">PHONE: <span>+1 234-242-9599</span></div>
+    <div class="col-sm">EMAIL: <span>info@lesspilles.com</span></div>
+    
+      
+</div>
+
+<!--------------------End of Footer----------------------->
+
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     -->
-  </body>
+</body>
+
 </html>

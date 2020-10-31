@@ -17,6 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Les Papilles</title>
   <script>
     $(document).ready(function () {
@@ -29,7 +30,7 @@
 
       $(document).scroll(function () {
         $(".nav-menu").css("background", "#282828")
-        $(".nav-menu").css("border-bottom", "1px solid aliceblue")
+        $(".nav-menu").css("border-bottom", "1px solid #DAA520")
 
       })
       $(document).scroll(function () {
@@ -91,6 +92,7 @@
 </head>
 
 <body>
+  
   <!--------------------Header------------------------------>
   <header>
     <!--------------------Navbar------------------------------>
@@ -216,8 +218,8 @@
   <!--------------------End of Slideshow----------------------->
 
   <!--------------------Menu----------------------->
-
-  <div class="page-header text-center font-weight-bold" id="m"
+<a name="m"></a>
+  <div class="page-header text-center font-weight-bold" 
     style="background-color:#282828; width: 100%; height: 50px; margin-top: 3px;">
     <h1 style="color: #DAA520;">Menu</h1>
   </div>>
@@ -283,7 +285,7 @@
       <div class="row">
         <div class="col">
           <label for="name" style="color: beige;">Name</label>
-          <input type="text" class="form-control" name="n" id="name" placeholder="Name" >
+          <input type="text" class="form-control"  name="n" id="name" placeholder="Name">
         </div>
         <div class="col">
           <label for="name" style="color: beige;">E-mail</label>
@@ -314,13 +316,13 @@
   <!--------------------Modal----------------------->
 
   <div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
+    <div class="modal-dialog" >
   
-      <div class="modal-content text-center">
-        <div class="modal-header text-center">
-          <h3 class="modal-title" style="margin-left: 25%;">Booking Successful</h3>
+      <div class="modal-content text-center" style="background-color: #282828; border: 2px solid #DAA520;">
+        <div class="modal-header text-center" style="color: #DAA520;">
+          <h3 class="modal-title" style="margin-left: 25%; color: #DAA520;">Booking Successful</h3>
         </div>
-        <div class="modal-body text-center" id="modal-body" >
+        <div class="modal-body text-center" id="modal-body" style="color: aliceblue;" >
           
         </div>
         <div class="modal-footer text-center">
@@ -395,12 +397,21 @@
     <!--------------------Footer----------------------->
   <div class="text-center row footer" style="background-color: #282828; margin-top: 0;">
 
-    <div class="col-sm">ADDRESS: <span>25 Bich St., New York, NY 10002.</span></div>
-    <div class="col-sm">PHONE: <span>+1 234-242-9599</span></div>
-    <div class="col-sm">EMAIL: <span>info@lesspilles.com</span></div>
-    
-      
+    <div class="col-sm-3">ADDRESS: <span>25 Bich St., New York, NY 10002.</span></div>
+    <div class="col-sm-3">PHONE: <span>+1 233-232-9599</span></div>
+    <div class="col-sm-3">EMAIL: <span>info@lesspilles.com</span></div>
+    <div class="col-sm-3">SUPPORT: <span>info</span></div>
 </div>
+
+<div class="row text-center footer-2" style="background-color: #282828; margin-top: 0;">
+  <div class="col-sm-3 "><a href="https://www.facebook.com/"><i class="fa fa-facebook fa-2x"></i></a></div>
+  <div class="col-sm-3 "><a href="https://twitter.com/"><i class="fa fa-twitter fa-2x"></i></a></div>
+  <div class="col-sm-3 "><a href="https://www.pinterest.com/"><i class="fa fa-pinterest fa-2x"></i></a></div>
+  <div class="col-sm-3 "><a href="https://www.instagram.com/"><i class="fa fa-instagram fa-2x"></i></a></div>
+  <div class="col-lg-12 "><a href="#top" title="Scroll To Top"><i class="fa fa-chevron-circle-up fa-2x"></i></a></div>
+</div>
+      
+
 
 <!--------------------End of Footer----------------------->
 

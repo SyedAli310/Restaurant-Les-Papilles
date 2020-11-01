@@ -1,65 +1,72 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
-body{
+
+body {
     font-family: 'Quicksand', sans-serif;
-    background-color: #DAA520;
     
 }
-/*------------------------Nav------------------------*/
-.nav-menu{
-    padding: 20px;
 
+/*------------------------Nav------------------------*/
+
+.nav-menu {
+    padding: 20px;
 }
-.fas{
+
+.fas {
     color: #DAA520
 }
-.menu{
+
+.menu {
     font-size: 20px;
     font-family: 'Quicksand', sans-serif;
     color: silver;
     letter-spacing: 1px;
 }
-.menu:hover{
+
+.menu:hover {
     color: #DAA520;
     transition-delay: 0.1s;
 }
-.bar1, .bar2, .bar3{
+
+.bar1, .bar2, .bar3 {
     width: 23px;
     height: 3px;
     margin: 5px;
-    
 }
-
 
 /*---------------------End of Nav--------------------*/
+
 /*Header----------------------------------------------------------------------------------------------*/
-header{
+
+header {
     height: 100vh;
-    background:linear-gradient(rgba(0,0,0,43),rgba(0,0,0,0.4)), 
-    url("./images/header.jpg")no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 43), rgba(0, 0, 0, 0.4)), url("./images/header.jpg")no-repeat center center/cover;
 }
 
-.banner{
+.banner {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 80%;
 }
 
-.heading{
+
+.heading {
     color: antiquewhite;
     letter-spacing: 1px;
-    animation-name: slide ;
+    animation-name: slide;
     animation-duration: 2s;
 }
-.main{
+
+.main {
     font-family: 'Satisfy', cursive;
     font-size: 25px;
     color: #DAA520;
@@ -69,45 +76,50 @@ header{
     animation-delay: 0.3s;
     animation-fill-mode: backwards;
 }
-@keyframes slide{
-    0%{
+
+@keyframes slide {
+    0% {
         transform: translateX(-1000px);
         opacity: 0;
     }
-    100%{
+    100% {
         transform: translateX(0);
         opacity: 1;
     }
 }
+
 /*End of Header---------------------------------------------------------------------------------------*/
-.info{
+
+.info {
     padding: 50px;
-    font-family: 'Quicksand', sans-serif;;
-    background:linear-gradient(rgba(0,0,0,43),rgba(0,0,0,0.4)), url('./images/achievement.jpg');
+    font-family: 'Quicksand', sans-serif;
+    ;
+    background: linear-gradient(rgba(0, 0, 0, 43), rgba(0, 0, 0, 0.4)), url('./images/achievement.jpg');
     background-repeat: no-repeat;
     width: 100%;
     height: auto;
     background-size: cover;
     border-top: 2px solid darkcyan;
-    border-bottom:2px solid darkcyan;
+    border-bottom: 2px solid darkcyan;
 }
+
 /*-------------------------------Menu--------------------------------------------------*/
 
-.crd{
+.crd {
     position: relative;
     margin: 20px;
-    background:#282828; 
-
+    background: #282828;
 }
-.crd-i{
+
+.crd-i {
     margin-top: 5px;
 }
 
 /*-------------------------------End of Menu--------------------------------------------------*/
 
-
 /*-------------------------------Booking--------------------------------------------------*/
-.booking{
+
+.booking {
     padding: 100px;
     border-top: 2px solid #282828;
     border-bottom: 2px solid #DAA520;
@@ -118,8 +130,9 @@ header{
     width: auto;
     height: auto;
 }
-#h1{
-    font-size:larger;
+
+#h1 {
+    font-size: larger;
     color: aliceblue;
     border-left: 5px solid #DAA520;
     border-radius: 5px;
@@ -128,91 +141,136 @@ header{
     background-color: #282828;
     text-shadow: #282828;
 }
-.form{
+
+.form {
     box-shadow: 1px 1px 1px 1px #282828;
     border-radius: 3px;
     background-color: #282828;
     opacity: 0.9;
     padding: 20px;
-   
 }
 
-.valueSpan2{
+.valueSpan2 {
     background-color: beige;
     padding: 2px 5px 2px 5px;
     border-radius: 4px;
 }
-.sbutton{
+
+.sbutton {
     color: beige;
     border: 1px solid #ffc107;
     border-radius: 20px;
     padding: 5px 50px 5px 50px;
     background: transparent;
 }
-.sbutton:hover{
+.cbutton{
+    color: beige;
+    border: 1px solid #ffc107;
+    border-radius: 20px;
+    padding: 5px 50px 5px 50px;
+    background: transparent;
+}
+.reset{
+    color: beige;
+    border: 1px solid #ffc107;
+    border-radius: 20px;
+    padding: 5px 50px 5px 50px;
+    background: transparent;
+}
+.sbutton:hover {
     background-color: #ffc107;
     transition: all 0.4s linear;
 }
+
+.cbutton:hover {
+    background-color: #ffc107;
+    transition: all 0.4s linear;
+}
+.reset:hover{
+    background-color: #ffc107;
+    transition: all 0.4s linear;
+}
+
 /*-------------------------------End of Booking--------------------------------------------------*/
 
 /*-------------------------------Footer--------------------------------------------------*/
 
-.hours{
+.hours {
     background-color: #282828;
     color: #DAA520;
     padding: 40px;
     margin: 0;
     border-bottom: 2px solid #DAA520;
-    
 }
-.hours p{
+
+.hours p {
     color: aliceblue;
 }
-.hours p:hover{
+
+.hours p:hover {
     color: #DAA520;
     transition-delay: 0.3s;
     cursor: pointer;
 }
-.hr{
+
+.hr {
     margin-bottom: 30px;
 }
 
-.carousel-indicators li { visibility: hidden; 
+.carousel-indicators li {
+    visibility: hidden;
 }
 
-.lead{
+.lead {
     margin-bottom: 10px;
 }
-.jumbotron{
+
+.jumbotron {
     margin-bottom: -50px;
 }
-.footer{
+
+.footer {
     padding: 50px;
     border-top: 2px solid #DAA520;
-    
     color: aliceblue;
     margin: 0;
 }
-.footer span{
+
+.footer span {
     color: grey;
 }
-.footer span:hover{
+
+.footer span:hover {
     color: #DAA520;
 }
-.footer-2{
+
+.footer-2 {
     border-bottom: 2px solid #DAA520;
     margin: 0;
 }
-.col-lg-12{
+
+.col-lg-12 {
     margin-top: 50px;
 }
-.col-sm-3 i{
+
+.col-sm-3 i {
     color: gray;
 }
-.col-sm-3 i:hover{
+
+.col-sm-3 i:hover {
     color: #DAA520;
 }
 
 /*-------------------------------End of Footer--------------------------------------------------*/
 
-  
+
+/*-----------------------------------Responsiv----------------------------------------------*/
+@media screen and (max-width: 600px) {
+    .contact{
+       margin-top: 30%;
+    }
+    
+    .about{
+        margin-top: 20%;
+    }
+}
